@@ -397,6 +397,14 @@ def main() -> None:
     keep_cols = [c for c in keep_cols if c in sections_gdf.columns]
 
     final = sections_gdf[keep_cols].copy()
+
+    SEZIONI_SPECIALI = [
+        "17", "19", "21", "22", "23", "26", "28", "29",
+        "44", "46", "48/1", "48/2", "49", "51", "61", "62",
+        "79", "91", "93",
+    ]
+    final = final.loc[~final["id_section"].isin(SEZIONI_SPECIALI)].copy()
+
     final = final.dropna(subset=["ianeselli_vote_pct", "highly_educated_pct", "density"])
     final = final.to_crs(EPSG_OUT)
     final.to_file(OUT_GEOJSON, driver="GeoJSON")
