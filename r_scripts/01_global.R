@@ -76,10 +76,11 @@ summary(LM_tests)
 # Visual inspection of the residuals to spot spatial clusters (High-High or Low-Low)
 tmap_mode("view") # Set interactive map mode
 
-tm_shape(trento) + 
+ols_residuals <- tm_shape(trento) + 
   tm_polygons("studres", 
               style = "quantile", 
               n = 4,
               palette = "-RdBu", # A divergent palette is excellent for residuals
               title = "OLS Studentized Residuals") +
   tm_layout(title = "Map of OLS Residuals")
+tmap_save(ols_residuals, "ols_residuals_map.png")
