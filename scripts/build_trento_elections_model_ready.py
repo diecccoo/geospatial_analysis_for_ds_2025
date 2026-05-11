@@ -239,7 +239,6 @@ def reconstruct_section_polygons(istat_gdf: gpd.GeoDataFrame, address_points: gp
         .rename(columns={None: "id_section"})
     )
 
-    # pandas may return a generic column name after apply; enforce final name
     if "id_section" not in block_to_section.columns:
         val_col = [c for c in block_to_section.columns if c != "SEZ21_ID"][0]
         block_to_section = block_to_section.rename(columns={val_col: "id_section"})
