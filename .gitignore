@@ -253,6 +253,8 @@ $RECYCLE.BIN/
 
 # RStudio files
 .Rproj.user/
+*.Rproj
+.Rprofile
 
 # produced vignettes
 vignettes/*.html
