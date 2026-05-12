@@ -11,7 +11,7 @@ library(ggpubr)
 
 
 setwd("..") #Same as script 1
-trento <- st_read("../data/processed/trento_elections_model_ready.geojson") #from the root
+trento <- st_read("../data/processed/trento_elections.geojson") #from the root
 
 trento <- trento[!is.na(trento$ianeselli_vote_pct) & !is.na(trento$highly_educated_pct), ]
 

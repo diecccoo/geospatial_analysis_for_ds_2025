@@ -10,7 +10,7 @@ library(spatialreg)
 setwd("..") #SET YOUR WD
 
 
-trento <- st_read("../data/processed/trento_elections_model_ready.geojson") #from the root of the repository
+trento <- st_read("../data/processed/trento_elections.geojson") #from the root of the repository
 trento <- st_transform(trento, 32632) 
 
 # 2. Run Ordinary Least Squares (OLS) model as the baseline
