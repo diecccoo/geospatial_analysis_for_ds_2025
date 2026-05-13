@@ -1,0 +1,16 @@
+numpy
+pandas
+geopandas
+shapely
+folium
+branca
+matplotlib
+seaborn
+networkx
+osmnx
+geopy
+requests
+scikit-learn
+mapclassify
+contextily
+ipykernel
